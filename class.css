@@ -1,0 +1,10 @@
+.Deepak{
+    
+    font-size: 15px;
+    color: orange; 
+    outline: 1px solid red;
+    width: 45%;
+}
+*{
+    letter-spacing: 1px;
+}

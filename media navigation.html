@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;
+padding: 0;
+}
+header {
+    height: 100px;
+    display: flex;
+    justify-content: end;  
+    align-items: center;
+    background-color: aquamarine; 
+}
+
+
+
+ul {
+  list-style-type: none;
+  display: flex;
+  margin-right: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  margin: 0 10px;
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bolder;
+}
+
+a:hover{
+  background-color: black;
+  color: white;
+}
+
+#menu{
+  display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+  /* This css rule will be applied only if the screen width is less than 768px */
+  header {
+    display: block;
+    height: auto;
+    padding: 20px 0px;
+  }
+
+
+ul {
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  padding: 20px 0px;
+}
+
+ul li {
+  width: 100%;
+  padding: 5px 5px;
+}
+#menu{
+  display: block;
+  width: 100%;
+  padding: 5px 5px;
+}
+
+li a {
+  display: block;
+  width: 95%;
+  text-align: center;
+}
+
+}
+    </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li id="menu"><a>Menu</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+</body>
+</html>

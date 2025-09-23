@@ -1,0 +1,23 @@
+# You would need to install the 'mnemonic' library first:
+# pip install mnemonic
+
+from mnemonic import Mnemonic
+
+# Initialize Mnemonic with the English wordlist
+# This uses the official BIP39 wordlist, not the words from your PDF.
+mnemo = Mnemonic("english")
+
+# Generate a 12-word mnemonic phrase (128 bits of entropy)
+# This is a valid BIP39 mnemonic
+words = mnemo.generate(128)
+
+print("Generated BIP39 Mnemonic Phrase:")
+print(words)
+
+# To check if it's valid (optional, but good for verification)
+is_valid = mnemo.check(words)
+print(f"\nIs the generated phrase a valid BIP39 mnemonic? {is_valid}")
+
+# You can also convert a mnemonic to a seed (for key generation)
+seed = mnemo.to_seed(words, passphrase="") # Passphrase can be empty or a custom string
+print(f"\nSeed (hex): {seed.hex()}")

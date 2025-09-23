@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+    width: 100%;
+    height: 400px;
+    background-color: aquamarine;
+    display: flex; /* This line enables control of flexbox in this container */
+    flex-direction: row; 
+    justify-content: space-evenly; /*start ,end , center, space-around, space-evenly */
+    align-items: stretch; /*center*/
+    flex-wrap: wrap; /* no-wrap, wrap-reverse*/
+  }
+  
+  .item {
+    width: 200px;
+    height: 200px;
+    background-color: chocolate;
+    border: 2px solid black;
+    border-radius: 10px;
+  }
+  
+
+  /* align content */
+  #container {
+    width: 100%;
+    height: 400px;
+    background-color: aquamarine;
+    display: flex; /* This line enables control of flexbox in this container */
+    flex-direction: row; 
+    justify-content: space-evenly; /*start ,end , center, space-around, space-evenly */
+    align-items: stretch; /*center*/
+    flex-wrap: wrap; /* no-wrap, wrap-reverse*/
+    align-content: space-evenly;  /*center,space-around , space-between,end,start,*/
+    /* row-gap: 120px; */
+    /* column-gap: 120px; */
+    gap: 120px;
+  }
+  
+  .item {
+    width: 200px;
+    height: 200px;
+    background-color: chocolate;
+    border: 2px solid black;
+    border-radius: 10px;
+  }
+  
+  #a{
+order: 4;
+  }
+  #b{
+    order: 2;
+  }
+  #c{
+    order: 1;
+  }
+  #d{
+    order: 3;
+  }
+
+   /* flex grow */
+   #container {
+    width: 100%;
+    height: 400px;
+    background-color: aquamarine;
+    display: flex; /* This line enables control of flexbox in this container */
+    flex-direction: row; 
+    justify-content: space-evenly; /*start ,end , center, space-around, space-evenly */
+    align-items: center; /*center*/
+    flex-wrap: wrap; /* no-wrap, wrap-reverse*/
+    align-content: space-evenly;  /*center,space-around , space-between,end,start,*/
+    /* row-gap: 120px; */
+    /* column-gap: 120px; */
+    gap: 100px;
+  }
+  
+  .item {
+    min-width: 200px;
+    height: 200px;
+    background-color: chocolate;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 30px;
+  }
+  
+  #a{
+order: 4;
+flex-grow: 1;
+  
+}
+  #b{
+    order: 2;
+    flex-grow: 5;
+  
+  }
+  #c{
+    order: 1;
+   flex-grow: 3;
+  }
+  #d{
+    flex-grow: 5;
+    order: 3;
+  }
+    </style>
+</head>
+<body>
+  <div id="container">
+    <div class="item" id="a">a</div>
+    <div class="item" id="b">b</div>
+    <div class="item" id="c">c</div>
+    <div class="item" id="d">d</div>
+     <div class="item">a</div>
+    <div class="item">b</div>
+    <div class="item">c</div>
+    <div class="item">d</div>
+    <div class="item">a</div>
+    <div class="item">b</div>
+    <div class="item">c</div>
+    <div class="item">d</div>
+  </div>
+</body>
+</html>

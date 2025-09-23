@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Working with Borders</title>
+ <style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.solid-border {
+  border: 3px solid #4CAF50; /* width, style, color */
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+.dashed-border {
+  border: 3px dashed #FF9800;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+.rounded-border {
+  border: 3px  double #2196F3 ;
+  border-radius: 15px; /* Rounded corners */
+  padding: 15px;
+  background-color: white;
+}
+ </style>
+</head>
+<body>
+
+  <div class="solid-border">
+    <h2>Solid Border</h2>
+    <p>This box has a solid green border.</p>
+  </div>
+
+  <div class="dashed-border">
+    <h2>Dashed Border</h2>
+    <p>This box has a dashed orange border.</p>
+  </div>
+
+  <div class="rounded-border">
+    <h2>Rounded Border</h2>
+    <p>This box has a solid blue border with rounded corners.</p>
+  </div>
+
+</body>
+</html>

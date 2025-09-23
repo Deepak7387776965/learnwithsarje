@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notification Icons</title>
+   <style>
+   * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 300px;
+  width: 100%;
+  padding: 20px;
+}
+
+.status-bar {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.status-icon {
+  position: relative;
+  padding-left: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+ 
+
+.status-icon::before {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 28px;
+
+  height: 28px;
+
+  background-size: contain;
+
+  background-repeat: no-repeat;
+
+  background-position: center;
+
+} 
+
+.notifications::before {
+
+  background-image: url("images/notification-icon.svg");
+
+}
+.emails::before {
+
+  background-image: url("images/email-icon.svg");
+
+}
+.logs::before {
+
+  background-image: url("images/log-icon.svg");
+
+}
+.status-icon::after {
+
+  content: attr(data-count);
+
+  position: absolute;
+
+  top: -25px;
+
+  right: -8px;
+
+  background-color: #ff4757;
+
+  color: white;
+
+  font-size: 12px;
+
+  font-weight: bold;
+
+  width: 20px;
+
+  height: 20px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+}
+
+   </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="status-bar">
+        <div class="status-icon notifications" data-count="8"></div>
+        <div class="status-icon emails" data-count="24"></div>
+        <div class="status-icon logs" data-count="3"></div>
+      </div>
+    </div>
+  </body>
+</html> 

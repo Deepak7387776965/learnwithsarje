@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Child Selectors Example</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* Target the first student */
+.students li:first-child {
+  color: green;
+  font-weight: bold;
+}
+
+/* Target the last student */
+.students li:last-child {
+  color: red;
+  font-style: italic;
+}
+
+/* Target the 3rd student */
+.students li:nth-child(3) {
+  background-color: lightyellow;
+  text-decoration: underline;
+}
+
+/* Target every even student */
+.students li:nth-child(even) {
+  background-color: #f0f0f0;
+}
+
+/* Target every odd student */
+.students li:nth-child(odd) {
+  background-color: #e0e0ff;
+}
+</style>
+<body>
+  <h2>Student List</h2>
+  <ul class="students">
+    <li>Student 1</li>
+    <li>Student 2</li>
+    <li>Student 3</li>
+    <li>Student 4</li>
+    <li>Student 5</li>
+  </ul>
+</body>
+</html>
